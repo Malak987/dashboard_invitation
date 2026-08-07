@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Dashboard Preview — سيف & ميرنا</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Cairo',sans-serif;background:#FDF7F2;color:#2B241E}
+.container{max-width:420px;margin:0 auto;padding:16px 16px 90px}
+.header{background:linear-gradient(135deg,#D7B98E,#C9A66B,#9C7A3C);border-radius:22px;padding:18px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between;box-shadow:0 8px 20px rgba(201,166,107,.28)}
+.header h1{font-size:19px;font-weight:800}
+.header p{opacity:.92;font-size:13px;margin-top:2px}
+.badge{background:rgba(255,255,255,.18);border-radius:20px;padding:4px 10px;font-size:11px;display:inline-flex;gap:6px;align-items:center;margin-top:6px;border:1px solid rgba(255,255,255,.3)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.card{background:#fff;border:1px solid #EEE6DC;border-radius:20px;padding:14px;box-shadow:0 8px 18px rgba(0,0,0,.04)}
+.card .icon{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px}
+.card .value{font-size:28px;font-weight:800;line-height:1;margin-top:10px}
+.card .sub{font-size:11px;color:#9A8E85}
+.chart{background:#fff;border:1px solid #EEE6DC;border-radius:20px;padding:18px;margin-top:16px;box-shadow:0 8px 18px rgba(0,0,0,.04)}
+.donut{width:110px;height:110px;border-radius:50%;background:conic-gradient(#6B8F7B 0 65%, #C98B8B 65% 85%, #D8D0C5 85% 100%);position:relative;display:flex;align-items:center;justify-content:center}
+.donut::after{content:'';position:absolute;width:78px;height:78px;background:#fff;border-radius:50%}
+.legend{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;margin-top:8px}
+.dot{width:10px;height:10px;border-radius:50%}
+.total{background:linear-gradient(90deg, rgba(201,166,107,.10), rgba(201,166,107,.06));border:1px solid rgba(201,166,107,.18);border-radius:14px;padding:12px;display:flex;align-items:center;gap:12px;margin-top:14px}
+.section{background:#fff;border:1px solid #EEE6DC;border-radius:20px;padding:16px;margin-top:16px;box-shadow:0 8px 18px rgba(0,0,0,.04)}
+.row{display:flex;gap:12px;background:#FFFBF7;border:1px solid #EEE6DC;border-radius:14px;padding:12px;margin-top:10px;align-items:center}
+.avatar{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800}
+.nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #EEE6DC;display:flex;justify-content:around;padding:8px 0 max(8px,env(safe-area-inset-bottom));box-shadow:0 -4px 20px rgba(0,0,0,.06);max-width:420px;margin:0 auto}
+.nav div{text-align:center;font-size:11px;color:#9A8E85}
+.nav .active{color:#9C7A3C}
+.mock{margin-top:12px;background:#fff;border:1px solid rgba(201,166,107,.35);border-radius:14px;padding:14px;display:flex;gap:10px;align-items:flex-start}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div>
+      <h1>مساء الخير ❤️</h1>
+      <p>متابعة دعوة الزفاف</p>
+      <div class="badge">✨ سيف & ميرنا <span style="opacity:.9">23 أغسطس 2026</span></div>
+    </div>
+    <div style="width:56px;height:56px;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.35);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px">❤️</div>
+  </div>
+
+  <div class="grid">
+    <div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><div class="icon" style="background:linear-gradient(135deg,#6B4F3B,#8B6B4F)">✉️</div><span style="background:#F5F3F0;border-radius:20px;padding:3px 8px;font-size:10px;font-weight:700;color:#6B5D52">إجمالي الردود</span></div><div class="value">12</div><div class="sub">عدد الأشخاص الذين ردّوا</div></div>
+    <div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><div class="icon" style="background:linear-gradient(135deg,#6B8F7B,#8FBFA3)">✓</div><span style="background:#F5F3F0;border-radius:20px;padding:3px 8px;font-size:10px;font-weight:700;color:#6B5D52">سيحضرون</span></div><div class="value">8</div><div class="sub">أكدوا الحضور</div></div>
+    <div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><div class="icon" style="background:linear-gradient(135deg,#C98B8B,#E0A6A6)">✕</div><span style="background:#F5F3F0;border-radius:20px;padding:3px 8px;font-size:10px;font-weight:700;color:#6B5D52">لن يحضروا</span></div><div class="value">3</div><div class="sub">اعتذروا عن الحضور</div></div>
+    <div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><div class="icon" style="background:linear-gradient(135deg,#D7B98E,#C9A66B,#9C7A3C)">👥</div><span style="background:rgba(201,166,107,.12);border-radius:20px;padding:3px 8px;font-size:10px;font-weight:700;color:#9C7A3C">إجمالي الحضور</span></div><div class="value">21</div><div class="sub">شخص متوقع حضورهم</div></div>
+  </div>
+
+  <div class="chart">
+    <div style="display:flex;align-items:center;gap:10px"><div style="width:4px;height:22px;background:#C9A66B;border-radius:4px"></div><strong>إحصائيات الحضور</strong><span style="margin-right:auto;background:#F5EBE0;border-radius:20px;padding:4px 10px;font-size:10px;font-weight:700;color:#6B4F3B">مباشر • Realtime</span></div>
+    <div style="display:flex;gap:18px;margin-top:18px;align-items:center">
+      <div class="donut"><div style="position:relative;z-index:1;text-align:center"><div style="font-size:22px;font-weight:800">12</div><div style="font-size:11px;color:#9A8E85">رد</div></div></div>
+      <div style="flex:1">
+        <div class="legend"><span class="dot" style="background:#6B8F7B"></span> سيحضرون <span style="margin-right:auto;background:rgba(107,143,123,.12);border-radius:20px;padding:2px 8px;font-size:11px;color:#6B8F7B">8 • 67%</span></div>
+        <div class="legend"><span class="dot" style="background:#C98B8B"></span> لن يحضروا <span style="margin-right:auto;background:rgba(201,139,139,.12);border-radius:20px;padding:2px 8px;font-size:11px;color:#C98B8B">3 • 25%</span></div>
+        <div class="legend"><span class="dot" style="background:#D8D0C5"></span> لم يردوا <span style="margin-right:auto;background:rgba(216,208,197,.3);border-radius:20px;padding:2px 8px;font-size:11px;color:#9A8E85">1 • 8%</span></div>
+      </div>
+    </div>
+    <div class="total"><div style="background:#C9A66B;color:#fff;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center">🎉</div><div><div style="font-size:12px;color:#6B5D52;font-weight:600">إجمالي الحضور المتوقع</div><div style="font-weight:800;color:#4A3526">21 شخص</div></div><div style="margin-right:auto;background:#fff;border:1px solid #EEE6DC;border-radius:20px;padding:6px 10px;font-weight:800;display:flex;gap:6px;align-items:center">👥 21</div></div>
+  </div>
+
+  <div class="section">
+    <div style="display:flex;align-items:center;gap:10px"><div style="width:4px;height:20px;background:#C9A66B;border-radius:4px"></div><strong>آخر الردود</strong><span style="margin-right:auto;background:linear-gradient(135deg,#D7B98E,#C9A66B);color:#fff;border-radius:20px;padding:5px 12px;font-size:11px;font-weight:700;display:flex;gap:4px;align-items:center">عرض كل الردود ←</span></div>
+    <div class="row"><div class="avatar" style="background:rgba(107,143,123,.10);color:#6B8F7B;border:1px solid rgba(107,143,123,.18)">✓</div><div style="flex:1"><div style="font-weight:700">أحمد محمد</div><div style="display:flex;gap:8px;align-items:center;margin-top:2px"><span style="background:#6B8F7B;color:#fff;border-radius:20px;padding:2px 8px;font-size:11px">سيحضر</span><span style="font-size:12px;color:#6B5D52;font-weight:600">4 أشخاص</span></div></div><div style="text-align:left"><div style="background:#fff;border:1px solid #EEE6DC;border-radius:20px;padding:4px 8px;font-weight:800;display:flex;gap:4px">👥 4</div><div style="font-size:10px;color:#9A8E85;margin-top:4px">منذ 2 س</div></div></div>
+    <div class="row"><div class="avatar" style="background:rgba(107,143,123,.10);color:#6B8F7B;border:1px solid rgba(107,143,123,.18)">✓</div><div style="flex:1"><div style="font-weight:700">محمد علي</div><div style="display:flex;gap:8px;align-items:center;margin-top:2px"><span style="background:#6B8F7B;color:#fff;border-radius:20px;padding:2px 8px;font-size:11px">سيحضر</span><span style="font-size:12px;color:#6B5D52;font-weight:600">2 شخصين</span></div></div><div style="text-align:left"><div style="background:#fff;border:1px solid #EEE6DC;border-radius:20px;padding:4px 8px;font-weight:800;display:flex;gap:4px">👥 2</div><div style="font-size:10px;color:#9A8E85;margin-top:4px">منذ 5 س</div></div></div>
+    <div class="row"><div class="avatar" style="background:rgba(201,139,139,.10);color:#C98B8B;border:1px solid rgba(201,139,139,.18)">✕</div><div style="flex:1"><div style="font-weight:700">سارة أحمد</div><div style="display:flex;gap:8px;align-items:center;margin-top:2px"><span style="background:#C98B8B;color:#fff;border-radius:20px;padding:2px 8px;font-size:11px">لن تحضر</span><span style="font-size:11px;color:#9A8E85">منذ 7 س</span></div></div><div style="text-align:left;display:none"></div></div>
+  </div>
+
+  <div class="section">
+    <div style="display:flex;align-items:center;gap:10px"><div style="width:4px;height:20px;background:#C9A66B;border-radius:4px"></div><strong>رسائل الضيوف ❤️</strong><span style="margin-right:auto;background:#F5EBE0;border:1px solid #EEE6DC;border-radius:20px;padding:5px 12px;font-size:11px;font-weight:700;color:#6B4F3B;display:flex;gap:4px;align-items:center">عرض كل الرسائل ←</span></div>
+    <div style="background:linear-gradient(180deg,#fff,#FFFBF7);border:1px solid #EEE6DC;border-radius:16px;padding:14px;margin-top:12px">
+      <div style="display:flex;gap:10px;align-items:center"><div style="width:36px;height:36px;background:linear-gradient(135deg,#D7B98E,#C9A66B);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800">أ</div><div><div style="font-weight:700;font-size:13px">أحمد محمد</div><div style="font-size:11px;color:#9A8E85">6 أغسطس 2026</div></div><div style="margin-right:auto;background:#FFF0F3;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center">❤️</div></div>
+      <div style="background:#FDF7F2;border-radius:12px;padding:12px;margin-top:10px;font-size:13px;line-height:1.7">"ألف مبروك وربنا يسعدكم ويتمم لكم على خير ❤️ بارك الله لكما"</div>
+    </div>
+    <div style="background:linear-gradient(180deg,#fff,#FFFBF7);border:1px solid #EEE6DC;border-radius:16px;padding:14px;margin-top:12px">
+      <div style="display:flex;gap:10px;align-items:center"><div style="width:36px;height:36px;background:linear-gradient(135deg,#D7B98E,#C9A66B);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800">م</div><div><div style="font-weight:700;font-size:13px">محمد علي</div><div style="font-size:11px;color:#9A8E85">6 أغسطس 2026</div></div><div style="margin-right:auto;background:#FFF0F3;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center">❤️</div></div>
+      <div style="background:#FDF7F2;border-radius:12px;padding:12px;margin-top:10px;font-size:13px;line-height:1.7">"مبروك يا سيف وميرنا، ربنا يتمم بخير"</div>
+    </div>
+  </div>
+
+  <div class="mock"><div style="background:rgba(201,166,107,.15);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:#9C7A3C">ℹ️</div><div><div style="font-weight:700;font-size:13px">وضع المعاينة — البيانات تجريبية</div><div style="font-size:11px;color:#6B5D52;line-height:1.4">لتوصيل البيانات الحقيقية: حدّث Firestore Rules كما في README ثم firebase deploy.</div></div></div>
+
+  <div style="text-align:center;margin-top:16px;font-size:11px;color:#9A8E85">صُنع بحب لسيف & ميرنا ❤️</div>
+  <div style="text-align:center;font-size:10px;color:#9A8E85;opacity:.7">sofamirna-2026 • guestResponses • Realtime</div>
+</div>
+<div class="nav">
+  <div class="active"><div style="background:linear-gradient(135deg,#D7B98E,#C9A66B);color:#fff;width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 4px;box-shadow:0 4px 12px rgba(201,166,107,.3)">🏠</div>الرئيسية</div>
+  <div><div style="width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 4px">👥</div>الحضور</div>
+  <div><div style="width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 4px;position:relative">❤️<span style="position:absolute;top:-2px;left:18px;background:#C9A66B;color:#fff;border-radius:10px;padding:1px 5px;font-size:9px">8</span></div>الرسائل</div>
+</div>
+</body>
+</html>
